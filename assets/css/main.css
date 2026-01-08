@@ -956,7 +956,7 @@
 }
 
 .process-item .process-icon i {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .process-item .process-icon span {
@@ -988,6 +988,56 @@
     margin: 0;
 }
 
+/* Animaciones de Iconos del Proceso */
+@keyframes writing-anim {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    20% { transform: rotate(-8deg) scale(1.1); }
+    40% { transform: rotate(8deg) scale(1.1); }
+    60% { transform: rotate(-8deg) scale(1.1); }
+    80% { transform: rotate(8deg) scale(1.1); }
+}
+
+.process-wrapper .col-lg-3:nth-child(1) .process-icon i {
+    animation: writing-anim 2s infinite ease-in-out;
+    display: inline-block;
+    top: -10px;
+}
+
+@keyframes user-float {
+    0%, 100% { transform: translateY(3px); }
+    50% { transform: translateY(-3px); }
+}
+
+.process-wrapper .col-lg-3:nth-child(2) .process-icon i {
+    animation: user-float 3s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes truck-run {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(1px) rotate(1deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(1px) rotate(-1deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.process-wrapper .col-lg-3:nth-child(3) .process-icon img {
+    width: 80%;
+    margin-bottom: 25%;
+    animation: truck-run 0.5s infinite linear;
+}
+
+@keyframes hose-wiggle {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+}
+
+.process-wrapper .col-lg-3:nth-child(4) .process-icon i {
+    animation: hose-wiggle 2s infinite ease-in-out;
+    display: inline-block;
+    transform-origin: center;
+}
+
 @media (max-width: 992px) {
     .process-wrapper {
         background-size: 0;
@@ -1011,6 +1061,10 @@
     padding: 50px;
 }
 
+.cta-2 .cta-wrapper {
+    background-image: url(../img/content-bg-7.jpg);
+}
+
 @media (min-width:993px) {
     .cta-wrapper .cta-men {
         background-image: url(../img/delivery-men-2.webp);
@@ -1025,6 +1079,13 @@
         object-fit: cover;
         object-position: center;
     }
+
+    .cta-2 .cta-wrapper .cta-men {
+        background-image: url(../img/forklift.png);
+        width: 490px;
+        height: 400px;
+        bottom: -40px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1035,6 +1096,53 @@
     .cta-wrapper .section-heading {
         text-align: center;
     }
+}
+
+/*Promo Item*/
+.promo-item-wrapper .promo-item {
+    background-color: var(--bg-grey);
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.promo-section.move-top {
+    position: relative;
+    margin-top: -80px;
+    z-index: 2;
+}
+
+.promo-item-wrapper .promo-item i {
+    color: var(--primary-color);
+    font-size: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.promo-item-wrapper .promo-item h3 {
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.promo-item-wrapper .promo-item p {
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.promo-item-wrapper .promo-item:hover {
+    background-color: var(--primary-color);
+}
+
+.promo-item-wrapper .promo-item:hover i {
+    color: var(--white-color);
+    transform: translateY(-10px) scale(1.1);
+}
+
+.promo-item-wrapper .promo-item:hover h3,
+.promo-item-wrapper .promo-item:hover p {
+    color: var(--white-color);
+    transform: translateY(-5px);
 }
 
 
