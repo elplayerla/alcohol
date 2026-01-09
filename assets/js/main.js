@@ -10,7 +10,7 @@
 		lerp: 0.1, // Adjust smoothness
 		gestureOrientation: "vertical",
 		normalizeWheel: true,
-		smoothTouch: true, // Enables smooth scrolling on touch devices
+		smoothTouch: false, // Enables smooth scrolling on touch devices
 		touchMultiplier: 2 // Adjust sensitivity
 	});
 
@@ -57,6 +57,9 @@
     });
 
     $(document).ready(function () {
+
+        // Fix for iOS scroll jumping
+        ScrollTrigger.config({ ignoreMobileResize: true });
 
         var html = $('html');
 
