@@ -620,6 +620,10 @@
     .main-header-info:after {
         transform: skewX(41.5deg);
     }
+
+    .slider-caption br {
+        display: block !important;
+    }
 }
 
 @media (max-width: 600px) {
