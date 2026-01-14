@@ -9,6 +9,13 @@
 
     <title>La Cima | Alcoholes y Derivados</title>
 
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alcoholeslacima.com.mx/">
+    <meta property="og:title" content="La Cima | Alcoholes y Derivados">
+    <meta property="og:description" content="Venta a granel de Alcohol Etílico 96° a partir de 25,000 litros con envío a todo México.">
+    <meta property="og:image" content="https://alcoholeslacima.com.mx/assets/img/favicon/apple-touch-icon.png">
+
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
     <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
@@ -50,7 +57,7 @@
                         <ul class="top-left">
                             <li><i class="fa-regular fa-phone"></i><a href="tel:3311471446">33 1147 1446</a></li>
                             <li><i class="fa-regular fa-envelope-dot"></i><a
-                                    href="mailto:alcoholesyderivadoslacima@gmail.com">alcoholesyderivadoslacima@gmail.com</a>
+                                    href="mailto:contacto@alcoholeslacima.com.mx">contacto@alcoholeslacima.com.mx</a>
                             </li>
                         </ul>
                         <div class="top-right">
@@ -524,11 +531,11 @@
                             <div class="quote-form-group">
                                 <div class="form-field">
                                     <input type="text" id="q-nombre" name="q-nombre" class="form-control"
-                                        placeholder="Nombre" required="">
+                                        placeholder="Nombre" required="" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Solo se permiten letras y espacios">
                                 </div>
                                 <div class="form-field">
-                                    <input type="phone" id="q-telefono" name="q-telefono" class="form-control"
-                                        placeholder="Teléfono" required="">
+                                    <input type="tel" id="q-telefono" name="q-telefono" class="form-control"
+                                        placeholder="Teléfono (10 dígitos)" required="" pattern="[0-9]{10}" maxlength="10" title="Ingresa un número de 10 dígitos">
                                 </div>
                                 <div class="form-field">
                                     <input type="text" id="q-empresa" name="q-empresa" class="form-control"
@@ -572,8 +579,8 @@
                                     </select>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" id="q-litros" name="q-litros" class="form-control"
-                                        placeholder="Litros, L" required="">
+                                    <input type="number" id="q-litros" name="q-litros" class="form-control"
+                                        placeholder="Litros (25,000 - 64,000)" required="" min="25000" max="64000" title="Mínimo 25,000 y máximo 64,000 litros">
                                 </div>
                                 <div class="form-field">
                                     <input type="text" id="q-municipio" name="q-municipio" class="form-control"
@@ -639,7 +646,7 @@
                                     <p><span>Telefóno:</span><a href="tel:3311471446">33 1147 1446</a></p>
                                 </li>
                                 <li>
-                                    <p><span>Envianos un correo:</span><a href="mailto:alcoholesyderivadoslacima@gmail.com">alcoholesyderivadoslacima@gmail.com</a></p>
+                                    <p><span>Envianos un correo:</span><a href="mailto:contacto@alcoholeslacima.com.mx">contacto@alcoholeslacima.com.mx</a></p>
                                     
                                 </li>
                             </ul>
@@ -655,7 +662,7 @@
         </div>
         <div class="copyright-area">
             © <span id="currentYear"></span> La Cima | Alcoholes y Derivados, Todos los derechos reservados. Diseñado
-            por: <a href="www.playerdesign.com.mx" target="_blank">PlayerDesign</a>
+            por: <a href="https://www.playerdesign.com.mx" target="_blank">PlayerDesign</a>
         </div>
     </footer>
     <!--/.footer-section-->
