@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ----------------------------------------------------
     // 1. CONFIGURACIÓN
     // ----------------------------------------------------
-    $destinatario = "contacto@alcoholeslacima.com.mx";
+    $destinatario = "dsolis@alcoholeslacima.com.mx";
     
     // CORRECCIÓN 1: EL ASUNTO
     // Los acentos en el asunto rompen el correo si no se codifican así:
